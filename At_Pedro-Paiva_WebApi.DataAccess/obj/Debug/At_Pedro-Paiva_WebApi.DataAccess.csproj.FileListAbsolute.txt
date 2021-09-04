@@ -1,0 +1,10 @@
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\bin\Debug\At_Pedro-Paiva_WebApi.DataAccess.dll.config
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\bin\Debug\At_Pedro-Paiva_WebApi.DataAccess.dll
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\bin\Debug\At_Pedro-Paiva_WebApi.DataAccess.pdb
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\bin\Debug\EntityFramework.dll
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\bin\Debug\EntityFramework.xml
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\obj\Debug\At_Pedro-Paiva_WebApi.DataAccess.csproj.CoreCompileInputs.cache
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\obj\Debug\At_Pedro-Paiva_WebApi.DataAccess.dll
+D:\PEDRO\Visual Studio Projects\At_Pedro-Paiva_WebApi\At_Pedro-Paiva_WebApi.DataAccess\obj\Debug\At_Pedro-Paiva_WebApi.DataAccess.pdb

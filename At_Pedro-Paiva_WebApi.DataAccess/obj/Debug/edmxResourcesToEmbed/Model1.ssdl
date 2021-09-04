@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Autor" EntityType="Model1.Store.Autor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Livro" EntityType="Model1.Store.Livro" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AutorLivro" EntityType="Model1.Store.AutorLivro" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AutorLivro_Autor" Association="Model1.Store.FK_AutorLivro_Autor">
+      <End Role="Autor" EntitySet="Autor" />
+      <End Role="AutorLivro" EntitySet="AutorLivro" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutorLivro_Livro" Association="Model1.Store.FK_AutorLivro_Livro">
+      <End Role="Livro" EntitySet="Livro" />
+      <End Role="AutorLivro" EntitySet="AutorLivro" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Autor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sobrenome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DtNasc" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Livro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titulo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ISBN" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ano" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AutorLivro">
+    <Key>
+      <PropertyRef Name="Autor_Id" />
+      <PropertyRef Name="Livro_Id" />
+    </Key>
+    <Property Name="Autor_Id" Type="int" Nullable="false" />
+    <Property Name="Livro_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AutorLivro_Autor">
+    <End Role="Autor" Type="Model1.Store.Autor" Multiplicity="1" />
+    <End Role="AutorLivro" Type="Model1.Store.AutorLivro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AutorLivro">
+        <PropertyRef Name="Autor_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutorLivro_Livro">
+    <End Role="AutorLivro" Type="Model1.Store.AutorLivro" Multiplicity="*" />
+    <End Role="Livro" Type="Model1.Store.Livro" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Livro">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AutorLivro">
+        <PropertyRef Name="Livro_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

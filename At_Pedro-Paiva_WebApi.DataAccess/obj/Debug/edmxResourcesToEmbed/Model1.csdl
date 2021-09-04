@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Autor" EntityType="Model1.Autor" />
+    <EntitySet Name="Livro" EntityType="Model1.Livro" />
+    <AssociationSet Name="AutorLivro" Association="Model1.AutorLivro">
+      <End Role="Autor" EntitySet="Autor" />
+      <End Role="Livro" EntitySet="Livro" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Autor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Sobrenome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DtNasc" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Livro" Relationship="Model1.AutorLivro" FromRole="Autor" ToRole="Livro" />
+  </EntityType>
+  <EntityType Name="Livro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Ano" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Autor" Relationship="Model1.AutorLivro" FromRole="Livro" ToRole="Autor" />
+  </EntityType>
+  <Association Name="AutorLivro">
+    <End Type="Model1.Autor" Role="Autor" Multiplicity="*" />
+    <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
+  </Association>
+</Schema>
